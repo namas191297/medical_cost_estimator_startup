@@ -1,0 +1,15 @@
+<!-- templates/index.html -->
+
+{% extends "base.html" %}
+
+{% block content %}
+  <div style="text-align: center; margin-top: 20px">
+       <img id="display_image" style="max-width: 600px" src="{{ url_for('static', filename='logo.jpg') }}"/>
+   </div>
+<h1 class="title">
+  Medical Cost Estimator
+</h1>
+<h2 class="subtitle">
+  Predict your expenses!
+</h2>
+{% endblock %}

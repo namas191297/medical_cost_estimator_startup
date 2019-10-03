@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Medical Details</title>
+
+<link href="{{ url_for('static', filename='bootstrap.min.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='narrow-jumbotron.css') }}" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='view.css') }}" media="all">
+<script type="text/javascript" src="view.js"></script>
+</head>
+<body id="main_body" >
+
+<div class="container">
+<div class="header clearfix">
+  <nav>
+     <ul class="nav nav-pills float-right">
+         <li class="nav-item">
+              <a class="nav-link active" href="{{ url_for('auth.index') }}">Home  <span class="sr-only">(current)</span></a>
+         </li>
+         <li>
+              <a class="nav-link active" href="{{ url_for('auth.logout') }}">Logout  <span class="sr-only">(current)</span></a>
+         </li>
+     </ul>
+  </nav>
+    <h3 class="text-muted">Medical Cost Estimator</h3>
+</div>
+
+  <img id="top" src="top.png" alt="">
+
+  <div id="form_container">
+  
+    <h1><a>Medical Form</a></h1>
+    <form id="form_84156" class="appnitro"  method="post" action="/estimate">
+          <div class="form_description">
+      <h2>Medical Form</h2>
+      <p>Please fill your medical details</p>
+    </div>            
+      <ul >
+      
+          <li id="li_1" >
+    <label class="description" for="fname">Name </label>
+    <span>
+      <input id="fname" name= "fname" class="element text" maxlength="255" size="8" value="" required/>
+      <label style="color:black">First</label>
+    </span>
+    <span>
+      <input id="lname" name= "lname" class="element text" maxlength="255" size="14" value="" required/>
+      <label style="color:black">Last</label>
+    </span>
+    </li>
+
+     <li id="li_2">
+         <span>
+      <input id="age" name= "age" class="element text" maxlength="255" size="14" value="" required/>
+      <label style="color:black">Age</label>
+    </span>
+     </li>
+
+          <li id="li_3" >
+    <label class="description" for="element_3">Sex </label>
+    <span>
+      <input id="male" name="sex" class="element checkbox" type="radio" value="1" />
+<label class="choice" style="color:black" for="male">Male</label>
+<input id="female" name="sex" class="element checkbox" type="radio" value="0" />
+<label class="choice" style="color:black" for="female">Female</label>
+
+    </span> 
+    </li>   <li id="li_4" >
+    <label class="description" for="bmi">BMI</label>
+    <div>
+      <input id="bmi" name="bmi" class="element text medium" type="text" maxlength="255" value="" required/>
+    </div> 
+    </li>   <li id="li_5" >
+    <label class="description" for="children">Number of children  </label>
+    <div>
+      <input id="children" name="children" class="element text medium" type="text" maxlength="255" value="" required/>
+    </div> 
+    </li>   <li id="li_6" >
+    <label class="description" for="smoking">Smoking Habit  </label>
+    <span>
+      <input id="smoker" name="smoking" class="element checkbox" type="radio" value="1" />
+<label class="choice" style="color:black" for="smoker">Yes</label>
+<input id="nonsmoker" name="smoking" class="element checkbox" type="radio" value="0" />
+<label class="choice" style="color:black" for="nonsmoker">No</label>
+
+    </span> 
+    </li>
+      
+          <li class="buttons">
+          <input type="hidden" name="form_id" value="84156" />
+          
+        <input id="saveForm" class="button_text" type="submit" name="submit" value="Submit" />
+    </li>
+      </ul>
+    </form><br><br>
+  </div>
+
+    <h3 color="white">{{ result }}</h3>
+
+<footer class="footer">
+   <p>&copy; Medical Estimator 2019</p>
+</footer>
+</div>
+</body>
+</html>

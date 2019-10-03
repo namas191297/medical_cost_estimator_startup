@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Store</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{ url_for('static', filename='bootstrap.min.css') }}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{{ url_for('static', filename='narrow-jumbotron.css') }}" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills float-right">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home  <span class="sr-only">(current)</span></a>
+            </li>
+            <li>
+              <a class="nav-link active" href="{{ url_for('auth.logout') }}">Logout  <span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">Payment</h3>
+      </div>
+
+      <div class="jumbotron">
+        <h1 class="display-3">Medical Cost Estimator</h1>
+        <p class="lead">Estimate your medical expense, only for <strong>$1.5</strong></p>
+        <form action="{{ url_for('auth.pay') }}" method="POST">
+          <script
+            src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="{{ pub_key }}"
+            data-amount="150"
+            data-name="Demo Site"
+            data-description="Widget"
+            data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+            data-locale="auto">
+          </script>
+        </form>
+      </div>
+
+      <footer class="footer">
+        <p>&copy; Medical Estimator 2019</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+  </body>
+</html>
