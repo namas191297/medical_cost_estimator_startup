@@ -24,10 +24,9 @@ The accuracy of this model in predicting expenses is close to ```83%``` and has 
 
 ![Result](images/result.png)
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
+## Contributors
+https://github.com/Pratik2587
+https://github.com/namas191297
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
