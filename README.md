@@ -26,6 +26,7 @@ The accuracy of this model in predicting expenses is close to ```83%``` and has 
 
 ## Contributors
 https://github.com/Pratik2587
+
 https://github.com/namas191297
 
 ## License
